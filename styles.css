@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffb6c1; /* Pembe arka plan */
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -14,29 +16,24 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #fff; /* Beyaz yazı */
 }
 
-#masal {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    min-height: 200px;
+.masal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 button {
-    display: block;
-    margin: 0 auto;
     padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #ff0000; /* Kırmızı butonlar */
+    color: #fff; /* Beyaz yazı */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #cc0000; /* Buton hover rengi */
 }
