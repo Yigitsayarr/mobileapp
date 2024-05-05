@@ -1,44 +1,16 @@
-const cardsContainer = document.getElementById('cards-container');
+document.getElementById('profileForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
 
-const words = [
-    { english: 'Hello', turkish: 'Merhaba' },
-    { english: 'Goodbye', turkish: 'Hoşçakal' },
-    { english: 'Thank you', turkish: 'Teşekkür ederim' },
-    { english: 'Sorry', turkish: 'Üzgünüm' },
-    { english: 'Yes', turkish: 'Evet' },
-    { english: 'No', turkish: 'Hayır' },
-];
+    // Formdaki bilgileri al
+    var name = document.getElementById('name').value;
+    var interests = document.getElementById('interests').value;
 
-// Shuffle function
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+    // Bu bilgileri işleme koymak için bir API'ye gönderebilir veya yerel depolama kullanabilirsiniz
 
-// Create cards
-function createCards() {
-    shuffle(words);
-    words.forEach(word => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.textContent = word.english;
-        card.addEventListener('click', () => flipCard(card, word.turkish));
-        cardsContainer.appendChild(card);
-    });
-}
+    // Örnek: Konsola yazdırma
+    console.log('Ad: ' + name);
+    console.log('İlgi Alanları: ' + interests);
 
-// Flip card
-function flipCard(card, translation) {
-    if (!card.classList.contains('flipped')) {
-        card.textContent = translation;
-        card.classList.add('flipped');
-    } else {
-        card.textContent = words.find(word => word.turkish === translation).english;
-        card.classList.remove('flipped');
-    }
-}
-
-// Initialize game
-createCards();
+    // Formu sıfırla
+    document.getElementById('profileForm').reset();
+});
