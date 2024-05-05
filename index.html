@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Match Game</title>
+    <title>Hobi Eşleştirici</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Hobi Eşleştirici</h1>
+    </header>
     <div class="container">
-        <h1>Word Match Game</h1>
-        <div class="cards-container" id="cards-container">
-            <!-- Kelime kartları buraya dinamik olarak eklenecek -->
-        </div>
+        <h2>Profil Oluştur</h2>
+        <form id="profileForm">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="interests">İlgi Alanlarınız:</label>
+            <input type="text" id="interests" name="interests" required>
+            <button type="submit">Kaydet</button>
+        </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
