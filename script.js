@@ -1,16 +1,17 @@
-document.getElementById('profileForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+// Masal listesi
+var masallar = [
+    "Bir varmış bir yokmuş, evvel zaman içinde kalbur saman içinde, develer tellal iken, pireler berber iken, ben annemi dinlerken, masal anlatırken...",
+    "Üç küçük domuzcuk ormanda yaşarmış. Büyük bir kötü kurt vardı, birinci evi saman, ikinci evi odun, üçüncü evi tuğla olan bu evlerden hangisini yıkmaya çalışsa hep bir şekilde kaçmayı başarırlarmış...",
+    "Uyuyan güzel masalıyla ünlüdür: Prens bir büyücünün kötü büyüsüne karşı savaşır ve onu öper, böylece laneti kırar ve güzel prenses uyandırır..."
+];
 
-    // Formdaki bilgileri al
-    var name = document.getElementById('name').value;
-    var interests = document.getElementById('interests').value;
+// Masalı ekrana yazdıran fonksiyon
+function masalGetir() {
+    var randomIndex = Math.floor(Math.random() * masallar.length);
+    var masalDiv = document.getElementById("masal");
+    masalDiv.innerHTML = masallar[randomIndex];
+}
 
-    // Bu bilgileri işleme koymak için bir API'ye gönderebilir veya yerel depolama kullanabilirsiniz
-
-    // Örnek: Konsola yazdırma
-    console.log('Ad: ' + name);
-    console.log('İlgi Alanları: ' + interests);
-
-    // Formu sıfırla
-    document.getElementById('profileForm').reset();
-});
+// "Masal Getir" butonuna tıklama olayı
+var btnMasalGetir = document.getElementById("btnMasalGetir");
+btnMasalGetir.addEventListener("click", masalGetir);
