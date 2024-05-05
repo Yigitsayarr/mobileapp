@@ -1,25 +1,33 @@
-// Define a color palette
-$primary-color: #FFC5C5; // pink
-$secondary-color: #FF0000; // red
-$background-color: #FFFFFF; // white
+/* Define a color palette */
+.primary-color {
+    background-color: #FFC5C5; /* pink */
+}
 
-// Global styles
+.secondary-color {
+    color: #FF0000; /* red */
+}
+
+.background-color {
+    background-color: #FFFFFF; /* white */
+}
+
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: $background-color;
+    background-color: #FFFFFF; /* white */
 }
 
 .container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: $primary-color;
+    background-color: #FFC5C5; /* pink */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: $secondary-color;
+    color: #FF0000; /* red */
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -31,8 +39,8 @@ h1 {
 }
 
 button {
-    background-color: $primary-color;
-    color: $secondary-color;
+    background-color: #FFC5C5; /* pink */
+    color: #FF0000; /* red */
     border: none;
     padding: 10px 20px;
     font-size: 18px;
@@ -40,9 +48,9 @@ button {
 }
 
 button:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: #FFA8A8; /* darker pink */
 }
 
 button:active {
-    background-color: darken($primary-color, 20%);
+    background-color: #FF8B8B; /* even darker pink */
 }
