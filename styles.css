@@ -1,72 +1,48 @@
+// Define a color palette
+$primary-color: #FFC5C5; // pink
+$secondary-color: #FF0000; // red
+$background-color: #FFFFFF; // white
+
+// Global styles
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    background-color: $background-color;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: $primary-color;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #333;
-}
-
-.masal {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: $secondary-color;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .masal-buttons {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    background-color: $primary-color;
+    color: $secondary-color;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: darken($primary-color, 10%);
 }
 
-#btnKorsanGemisi {
-    background-color: #2196F3;
-}
-
-#btnKorsanGemisi:hover {
-    background-color: #1e87db;
-}
-
-#btnKucukPrenses {
-    background-color: #FF9800;
-}
-
-#btnKucukPrenses:hover {
-    background-color: #e68a00;
-}
-
-#btnDurdur {
-    background-color: #f44336;
-}
-
-#btnDurdur:hover {
-    background-color: #d32f2f;
+button:active {
+    background-color: darken($primary-color, 20%);
 }
