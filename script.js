@@ -10,6 +10,10 @@ function masalGetir() {
     var randomIndex = Math.floor(Math.random() * masallar.length);
     var masalDiv = document.getElementById("masal");
     masalDiv.innerHTML = masallar[randomIndex];
+    
+    // Masal çal
+    var audio = new Audio('masal1.mp3');
+    audio.play();
 }
 
 // "Masal Getir" butonuna tıklama olayı
